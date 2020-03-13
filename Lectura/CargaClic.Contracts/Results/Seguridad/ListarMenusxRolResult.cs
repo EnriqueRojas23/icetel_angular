@@ -19,6 +19,7 @@ namespace CargaClic.Data.Contracts.Results.Seguridad
         public string Icono	{ get;set; }        
         public string srp_seleccion { get;set; }
         public bool visible {get;set;}
+        public string permisos {get;set;}
         public List<ListarMenusxRolDto> submenu {get;set;}
 
     }

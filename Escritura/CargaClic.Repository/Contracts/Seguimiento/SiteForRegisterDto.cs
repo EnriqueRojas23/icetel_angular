@@ -21,5 +21,8 @@ namespace CargaClic.API.Dtos.Seguimiento
         public decimal? real_ingreso { get; set; }
         public decimal? real_costo { get; set; }
         public string geom { get; set; }
+
+
+        public string proyecto {get;set;}
     }
 }

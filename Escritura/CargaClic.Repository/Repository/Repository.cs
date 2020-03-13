@@ -44,7 +44,10 @@ namespace CargaClic.Handlers.Seguridad
 
         public void Delete(T entity) {  _context.Remove(entity); _context.SaveChanges();  }
 
-        public void DeleteAll(IEnumerable<T> entity) {  _context.RemoveRange(entity);  _context.SaveChanges(); }
+        public void DeleteAll(IEnumerable<T> entity) { 
+                
+                 _context.RemoveRange(entity);  _context.SaveChanges();
+              }
 
         public async Task<T> Get(Expression<Func<T, bool>> predicate) 
         {

@@ -90,13 +90,20 @@ namespace Common
             }
           
         }
-        public async Task<User> Update(User user)
+        public async Task<User> Update(User user, string password)
         {
-
+            byte[] passwordHash, passwordSalt;
             using(var transaction = _context.Database.BeginTransaction())
             {
-               
+                CreatePasswordHash(password,out passwordHash, out passwordSalt);
+                
                 var userDb = await _context.Users.SingleOrDefaultAsync(x=>x.Id == user.Id);
+
+
+                userDb.PasswordHash = passwordHash;
+                userDb.PasswordSalt = passwordSalt;
+               
+                
                 userDb.Dni = user.Dni;
                 userDb.Email = user.Email;
                 userDb.EstadoId = user.EstadoId;

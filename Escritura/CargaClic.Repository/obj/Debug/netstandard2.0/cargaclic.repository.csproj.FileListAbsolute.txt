@@ -24,7 +24,6 @@ D:\RIA\RIA\2019\Proyectos\ICETEL\App\Web\Escritura\CargaCLic.repository\bin\Debu
 D:\RIA\RIA\2019\Proyectos\ICETEL\App\Web\Escritura\CargaCLic.repository\bin\Debug\netstandard2.0\CargaClic.Domain.pdb
 D:\RIA\RIA\2019\Proyectos\ICETEL\App\Web\Escritura\CargaCLic.repository\bin\Debug\netstandard2.0\Common.pdb
 D:\RIA\RIA\2019\Proyectos\ICETEL\App\Web\Escritura\CargaCLic.repository\obj\Debug\netstandard2.0\cargaclic.repository.csprojAssemblyReference.cache
-D:\RIA\RIA\2019\Proyectos\ICETEL\App\Web\Escritura\CargaCLic.repository\obj\Debug\netstandard2.0\cargaclic.repository.csproj.CoreCompileInputs.cache
 D:\RIA\RIA\2019\Proyectos\ICETEL\App\Web\Escritura\CargaCLic.repository\obj\Debug\netstandard2.0\cargaclic.repository.AssemblyInfoInputs.cache
 D:\RIA\RIA\2019\Proyectos\ICETEL\App\Web\Escritura\CargaCLic.repository\obj\Debug\netstandard2.0\cargaclic.repository.AssemblyInfo.cs
 D:\RIA\RIA\2019\Proyectos\ICETEL\App\Web\Escritura\CargaCLic.repository\obj\Debug\netstandard2.0\cargaclic.repository.csproj.CopyComplete

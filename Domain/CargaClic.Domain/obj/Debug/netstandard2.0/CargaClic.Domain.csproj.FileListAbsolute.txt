@@ -16,7 +16,6 @@ D:\RIA\RIA\2019\Proyectos\ICETEL\App\Web\Domain\CargaClic.Domain\bin\Debug\netst
 D:\RIA\RIA\2019\Proyectos\ICETEL\App\Web\Domain\CargaClic.Domain\bin\Debug\netstandard2.0\Common.dll
 D:\RIA\RIA\2019\Proyectos\ICETEL\App\Web\Domain\CargaClic.Domain\bin\Debug\netstandard2.0\Common.pdb
 D:\RIA\RIA\2019\Proyectos\ICETEL\App\Web\Domain\CargaClic.Domain\obj\Debug\netstandard2.0\CargaClic.Domain.csprojAssemblyReference.cache
-D:\RIA\RIA\2019\Proyectos\ICETEL\App\Web\Domain\CargaClic.Domain\obj\Debug\netstandard2.0\CargaClic.Domain.csproj.CoreCompileInputs.cache
 D:\RIA\RIA\2019\Proyectos\ICETEL\App\Web\Domain\CargaClic.Domain\obj\Debug\netstandard2.0\CargaClic.Domain.AssemblyInfoInputs.cache
 D:\RIA\RIA\2019\Proyectos\ICETEL\App\Web\Domain\CargaClic.Domain\obj\Debug\netstandard2.0\CargaClic.Domain.AssemblyInfo.cs
 D:\RIA\RIA\2019\Proyectos\ICETEL\App\Web\Domain\CargaClic.Domain\obj\Debug\netstandard2.0\CargaClic.Domain.csproj.CopyComplete

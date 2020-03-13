@@ -46,6 +46,9 @@ using CargaClic.Domain.Facturacion;
 using CargaClic.Repository.Interface.Seguimiento;
 using CargaClic.Repository.Seguimiento;
 using CargaClic.ReadRepository.Interface.Seguimiento;
+using CargaClic.Domain.Seguimiento;
+using CargaClic.ReadRepository.Interface.Seguridad;
+using CargaClic.ReadRepository.Repository.Seguridad;
 
 namespace CargaClic.API
 {
@@ -74,6 +77,15 @@ namespace CargaClic.API
              services.AddScoped<IRepository<RolUser>,Repository<RolUser>>();
              services.AddScoped<IRepository<Estado>,Repository<Estado>>();
 
+             services.AddScoped<IRepository<Site>,Repository<Site>>();
+             services.AddScoped<IRepository<Documento>,Repository<Documento>>();
+             services.AddScoped<IRepository<Contratista>,Repository<Contratista>>();
+             services.AddScoped<IRepository<Trabajador>,Repository<Trabajador>>();
+             services.AddScoped<IRepository<Incidencia>,Repository<Incidencia>>();
+
+             
+             services.AddScoped<IRepository<ActasSite>,Repository<ActasSite>>();
+             services.AddScoped<IRepository<ActaConformidad>,Repository<ActaConformidad>>();
              
 
              services.AddScoped<IMantenimientoRepository,MantenimientoRepository>();
@@ -88,10 +100,11 @@ namespace CargaClic.API
             services.AddScoped<IRepository<Proveedor>, Repository<Proveedor>>();
             services.AddScoped<IRepository<Vehiculo>, Repository<Vehiculo>>();
             services.AddScoped<IRepository<Huella>, Repository<Huella>>();
-            services.AddScoped<IRepository<Chofer>, Repository<Chofer>>();
+            
             services.AddScoped<IRepository<ValorTabla>, Repository<ValorTabla>>();
             services.AddScoped<IProductoRepository, ProductoRepository>();
             services.AddScoped<IClienteRepository, ClienteRepository>();
+            services.AddScoped<ISeguridadReadRepository, SeguridadReadRepository>();
 
 
             services.AddScoped<IQueryHandler<ListarProductosParameter>,ListarProductosQuery>();
@@ -122,7 +135,7 @@ namespace CargaClic.API
 
             services.AddScoped<IFacturacionReadRepository,FacturacionReadRepository>();
             services.AddScoped<IFacturacionRepository,FacturacionRepository>();
-            services.AddScoped<IRepository<Documento>,Repository<Documento>>();
+            
             
             
             services.AddScoped<IRepository<Propietario>,Repository<Propietario>>();

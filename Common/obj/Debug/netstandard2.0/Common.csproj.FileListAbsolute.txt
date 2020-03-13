@@ -20,7 +20,6 @@ D:\RIA\RIA\2019\Proyectos\ICETEL\App\Web\Common\bin\Debug\netstandard2.0\Common.
 D:\RIA\RIA\2019\Proyectos\ICETEL\App\Web\Common\bin\Debug\netstandard2.0\Common.dll
 D:\RIA\RIA\2019\Proyectos\ICETEL\App\Web\Common\bin\Debug\netstandard2.0\Common.pdb
 D:\RIA\RIA\2019\Proyectos\ICETEL\App\Web\Common\obj\Debug\netstandard2.0\Common.csprojAssemblyReference.cache
-D:\RIA\RIA\2019\Proyectos\ICETEL\App\Web\Common\obj\Debug\netstandard2.0\Common.csproj.CoreCompileInputs.cache
 D:\RIA\RIA\2019\Proyectos\ICETEL\App\Web\Common\obj\Debug\netstandard2.0\Common.AssemblyInfoInputs.cache
 D:\RIA\RIA\2019\Proyectos\ICETEL\App\Web\Common\obj\Debug\netstandard2.0\Common.AssemblyInfo.cs
 D:\RIA\RIA\2019\Proyectos\ICETEL\App\Web\Common\obj\Debug\netstandard2.0\Common.dll

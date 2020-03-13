@@ -12,6 +12,7 @@ using CargaClic.Domain.Facturacion;
 using CargaClic.Data.Mappings.Facturacion;
 using CargaClic.Data.Mappings.Inventario;
 using CargaClic.Domain.Seguimiento;
+using CargaClic.Data.Mappings.Seguimiento;
 
 namespace CargaClic.Data
 {
@@ -33,6 +34,9 @@ namespace CargaClic.Data
         
         public DbSet<CargaMasiva> CargaMasiva {get;set;}
         public DbSet<Site> Site {get;set;}
+        public DbSet<Documento> Documentos {get;set;}
+        public DbSet<ActaConformidad> ActasConformidad {get;set;}
+        public DbSet<ActasSite> ActasSite {get;set;}
 
         public DbSet<ShipmentLine> ShipmentLine {get;set;}
         public DbSet<Pckwrk> Pckwrk {get;set;}
@@ -40,15 +44,15 @@ namespace CargaClic.Data
         public DbSet<Manifiesto> Manifiesto {get;set;}
 
         public DbSet<Carga> Carga {get;set;}
-     
-     
+        public DbSet<Contratista> Contratistas {get;set;}
+        public DbSet<Incidencia> Incidencias {get;set;}
        
 
         public DbSet<OrdenSalida> OrdenSalida {get;set;}
         public DbSet<OrdenSalidaDetalle> OrdenSalidaDetalle {get;set;}
 
         public DbSet<Proveedor> Proveedor {get;set;}
-        public DbSet<Chofer> Chofer {get;set;}
+        public DbSet<Trabajador> Trabajador {get;set;}
         public DbSet<Vehiculo> Vehiculo {get;set;}
         public DbSet<EquipoTransporte> EquipoTransporte {get;set;}
         public DbSet<Ubicacion> Ubicacion {get;set;}
@@ -84,10 +88,16 @@ namespace CargaClic.Data
 
             builder.ApplyConfiguration(new CargaMasivaConfiguration());
             builder.ApplyConfiguration(new SiteConfiguration());
+            builder.ApplyConfiguration(new DocumentoConfiguration());
+            builder.ApplyConfiguration(new ActaConformidadConfiguration());
+            builder.ApplyConfiguration(new ContratistaConfiguration());
+            builder.ApplyConfiguration(new TrabajadorConfiguration());
+            builder.ApplyConfiguration(new IncidenciaConfiguration());
+            builder.ApplyConfiguration(new ActasSiteConfiguration());
 
 
             builder.ApplyConfiguration(new PreliquidacionConfiguration());
-            builder.ApplyConfiguration(new DomumentoConfiguration());
+            
             builder.ApplyConfiguration(new PreliquidacionDetalleConfiguration());
             builder.ApplyConfiguration(new ComprobanteConfiguration());
             builder.ApplyConfiguration(new ComprobanteDetalleConfiguration());
@@ -115,7 +125,7 @@ namespace CargaClic.Data
             builder.ApplyConfiguration(new ValorTablaConfiguration());
 
             builder.ApplyConfiguration(new VehiculoConfiguration());
-            builder.ApplyConfiguration(new ChoferConfiguration());
+            
             builder.ApplyConfiguration(new ProveedorConfiguration());
             builder.ApplyConfiguration(new EquipoTransporteConfiguration());
             builder.ApplyConfiguration(new UbicacionConfiguration());

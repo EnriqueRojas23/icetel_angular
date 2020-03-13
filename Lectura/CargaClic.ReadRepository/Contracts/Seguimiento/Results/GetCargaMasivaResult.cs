@@ -12,9 +12,12 @@ namespace CargaClic.ReadRepository.Contracts.Seguimiento.Results
         public string NombreEstado	{get;set;}
         public string documentacion	{get;set;}
         public string actas_conformidad	{get;set;}
-        public string facturas	{get;set;}
-        public string presupuesto	{get;set;}
-        public string real{get;set;}
+        public decimal facturas	{get;set;}
+        public decimal presupuesto	{get;set;}
+        public decimal real{get;set;}
+        public decimal bolsa {get;set;}
+        public string tipo_proyecto {get;set;}
+        
 
     }
 }

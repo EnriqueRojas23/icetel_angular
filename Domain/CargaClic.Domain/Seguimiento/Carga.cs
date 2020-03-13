@@ -14,5 +14,6 @@ namespace CargaClic.Domain.Seguimiento
         public decimal? presupuesto { get; set; }
         public decimal? real { get; set; }
         public string nombre_archivo {get;set;}
+        public string tipo_proyecto {get;set;}
     }
 }

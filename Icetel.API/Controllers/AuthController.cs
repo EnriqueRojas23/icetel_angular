@@ -4,14 +4,9 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
-using CargaClic.API.Data;
 using CargaClic.API.Dtos;
-using CargaClic.Data;
 using CargaClic.Data.Contracts.Parameters.Seguridad;
 using CargaClic.Data.Contracts.Results.Seguridad;
-
-using CargaClic.Handlers;
-
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
@@ -19,6 +14,7 @@ using Common.QueryHandlers;
 using System.Linq;
 using CargaClic.Data.Interface;
 using CargaClic.Domain.Seguridad;
+using CargaClic.ReadRepository.Interface.Seguridad;
 
 namespace CargaClic.API.Controllers
 {
@@ -29,15 +25,18 @@ namespace CargaClic.API.Controllers
         private readonly IAuthRepository _repo;
         private readonly IRepository<RolUser> _repo_Roluser;
         private readonly IConfiguration _config;
+        private readonly ISeguridadReadRepository _repo_Seguridad;
         private readonly IQueryHandler<ListarMenusxRolParameter> _repo_Menu;
 
         public AuthController(IAuthRepository repo
         , IRepository<RolUser> repo_roluser
         , IConfiguration config
+        , ISeguridadReadRepository repo_Seguridad
         ,IQueryHandler<ListarMenusxRolParameter>  repo_menu
         )
         {
             _config = config;
+            _repo_Seguridad = repo_Seguridad;
             _repo_Menu = repo_menu;
             _repo = repo;
             _repo_Roluser = repo_roluser;
@@ -78,10 +77,12 @@ namespace CargaClic.API.Controllers
                
                 
             }
+
+            var opts = await _repo_Seguridad.GetAllOptions( userFromRepo.Id);
               
               
              //Eliminar duplicados [multiples Roles]
-             foreach (var item in pantallas)
+             foreach (var item in pantallas.OrderByDescending(x=>x.Id))
              {
                  if(auxPantallas.Where(x=>x.Id == item.Id).SingleOrDefault() == null)
                  {
@@ -110,7 +111,7 @@ namespace CargaClic.API.Controllers
              var tokenDescriptor = new SecurityTokenDescriptor
              {
                  Subject = new ClaimsIdentity(claims),
-                 Expires = DateTime.Now.AddDays(1),
+                 Expires = DateTime.Now.AddDays(365),
                  SigningCredentials = creds
              };
 
@@ -120,6 +121,7 @@ namespace CargaClic.API.Controllers
 
              return Ok(new {
                  menu = final,
+                 opts = opts,
                  token = tokenHandler.WriteToken(token)
              });
 

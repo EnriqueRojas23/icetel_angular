@@ -4,20 +4,60 @@ namespace CargaClic.ReadRepository.Contracts.Seguimiento.Results
 {
     public class GetSiteResult
     {
-        public string id	{get;set;}
-        public string carga_id	{get;set;}
+        public int id	{get;set;}
+        public int carga_id	{get;set;}
         public DateTime fecha_registro	{get;set;}
-        public string usuario_id	{get;set;}
-        public string nombre_site	{get;set;}
+        public int usuario_id	{get;set;}
+        public string nombre_site	{get;set;}  
         public string latitud	{get;set;}
         public string longitud	{get;set;}
-        public string distrito_id	{get;set;}
+        public int distrito_id	{get;set;}
         public string direccion	{get;set;}
         public string numero_suministro	{get;set;}
-        public string estado_id	{get;set;}
-        public string presupuesto_ingreso	{get;set;}
-        public string presupuesto_costo	{get;set;}
-        public string real_ingreso	{get;set;}
-        public string real_costo{get;set;}
+        public int estado_id	{get;set;}
+        public string estado {get;set;}
+        public decimal presupuesto_ingreso	{get;set;}
+        public decimal presupuesto_costo	{get;set;}
+        public decimal real_ingreso	{get;set;}
+        public decimal real_costo{get;set;}
+        public string contratista {get;set;}
+        public DateTime fecha_inicio_proyecto {get;set;}
+        public DateTime fecha_reembolso_factura_contratista {get;set;}
+        public int contratista_id {get;set;}
+        public int estado_poste {get;set;}
+        public bool estado_poste_enviado {get;set;}
+        public bool? primer_pago_contratista {get;set;}
+        public DateTime? fecha_segundo_pago {get;set;}
+        public DateTime? fecha_primer_pago {get;set;}
+        public bool? segundo_pago_contratista {get;set;}
+        public decimal? primer_pago_monto {get;set;}
+        public decimal? segundo_pago_monto {get;set;}
+        public DateTime? fecha_adicional_pago {get;set;}
+        public decimal? adicional_pago_monto {get;set;}
+
+
+
+        public string pru_model { get; set; }
+        public string cell_id { get; set; }
+        public string nodeb_id { get; set; }
+        public string nodeb_name { get; set; }
+        public string azimuth { get; set; }
+        public string downtilt { get; set; }
+        public string e_downtilt { get; set; }
+        public string m_downtilt { get; set; }
+        public string ret { get; set; }
+        public string ground_height { get; set; }
+        public string antenna_type { get; set; }
+        public string antenna_gain { get; set; }
+        public string h_beamwidth { get; set; }
+        public string v_beamwidth { get; set; }
+        public int?   number_antennas { get; set; }
+
+
+        public DateTime fecha_forecast {get;set;}
+        public DateTime fecha_asignacion {get;set;}
+
+
+        
     }
 }

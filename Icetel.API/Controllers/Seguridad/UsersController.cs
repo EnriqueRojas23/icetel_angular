@@ -89,7 +89,7 @@ namespace CargaClic.API.Controllers
                 
             };
 
-            var createdUser = await _auth.Update(userToCreate);
+            var createdUser = await _auth.Update(userToCreate, userForRegisterDto.Password);
             return StatusCode(201);
         }
         

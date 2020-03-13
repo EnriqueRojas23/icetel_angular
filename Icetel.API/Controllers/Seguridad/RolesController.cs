@@ -59,8 +59,8 @@ namespace CargaClic.API.Controllers
             {
                 Descripcion = rolForRegisterDto.Descripcion,
                 Alias = rolForRegisterDto.Alias,
-                Publico = rolForRegisterDto.Publico,
-                Activo = rolForRegisterDto.Activo
+                Publico = false,
+                Activo = true
 
             };
             ;

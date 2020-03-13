@@ -33,16 +33,29 @@ namespace CargaClic.Common
         }
         public enum EstadoCarga : int
         {
-            Pendiente = 25,
-            Confirmado = 26,
-            Despachado = 27,
+            Creado = 4,
+            EnProceso = 5,
+            Cerrado = 6,
         }
-        public enum EstadoEquipoTransporte : int
+        
+        public enum StatusPoste : int
         {
-            EnProceso = 13,
-            Asignado = 14,
-            EnDescarga = 15,
-            Cerrado = 16,
+   
+            EnGestion   = 14,
+            EnEjecucion   = 15,
+            Instalado   = 16,
+        }
+
+        public enum Site : int
+        {
+   
+            Creado   = 7,
+            Asignado   = 8,
+            ProyectoIniciado   = 9,
+            PagoConcesionariaRealizado   = 10 ,
+            InstalaciónIniciada   =  11 ,
+            RevisiónDocFinalizada   = 12,
+            Liquidado  = 13
         }
         public enum EstadoInventario : int
         {
